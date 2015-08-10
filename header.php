@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>As&AMP;le</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class()?>>
+    <div class="wrapper">
+        <header class="main">
+            <div class="inner">
+                <div class="logo">
+                    as<span class="icon-and"></span>le
+                </div>
+
+                <?php if (function_exists(clean_custom_menus)) clean_custom_menus("primary", get_permalink( $post->ID )); ?>
+
+
+            </div>
+        </header>

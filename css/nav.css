@@ -1,0 +1,40 @@
+header .nav {
+	width: 1000px;
+	float: left;
+
+}
+header .nav li {
+	width: 16.66%;
+	height: 125px; 
+	float: left;
+}
+header .nav a {
+	display: block;
+	text-align: center;
+	color: #2c160a;
+	margin-top: 27px;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 600;
+}
+
+ul.names {
+    font-size: 15px;
+}
+    ul.names li {
+        display: block;
+        line-height: 18px;
+        margin-bottom: 9px;
+    }
+    ul.names li.title {
+        line-height: 18px;
+        margin-bottom: 36px;
+    }
+    ul.names a {
+        color: #231f20;
+        text-decoration: none;
+    }
+    ul.names a:hover {
+        color: #ee7457;
+    } 

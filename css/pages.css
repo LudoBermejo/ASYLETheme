@@ -1,0 +1,56 @@
+/* HOME PAGE */
+.home .stamp {
+    float: left;
+    margin: 0 36px 36px 0;    
+}
+.home .well {
+    float: left;
+    width: 552px;
+}
+    .content.home .well h2 {
+        margin-bottom: 18px;
+    }
+.home .carrousel .stamp {
+    margin-bottom: 0;
+}
+
+
+/* TEAM PAGE */
+.gallery li {
+    margin: 0 18px 18px 0;
+    float: left;
+}
+.gallery .name {
+    font-weight: 200;
+    text-align: center;
+    display: block;
+    margin: 9px 0;
+}
+
+
+/* AUTHOR PAGE */
+.author .stamp {
+    float: left;
+    margin-right: 27px;
+}
+.author p {
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 167px;
+}
+
+
+/* ESSAYS PAGE (home + internal) */
+.essays .sidebar .stamp {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.essays .sidebar .icon-frame {
+    display: inline-block;
+}
+.essays .content p {
+    font-weight: 200;
+}
+
+
+
