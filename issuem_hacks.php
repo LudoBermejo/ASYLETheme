@@ -614,7 +614,7 @@ function getStampsPastIssues() {
 
 function getAllIssues() {
 
-    $archives = do_issuem_archives_list([]);
+    $archives = do_issuem_archives_list("");
 
     $result = "";
 
