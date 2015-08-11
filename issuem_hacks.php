@@ -548,7 +548,7 @@ function do_issuem_archives_list( $atts ) {
 
 function getStampsPastIssues() {
 
-    $archives = do_issuem_archives_list([]);
+    $archives = do_issuem_archives_list("");
 
     $result = "";
     foreach ( $archives as $archive => $issue_array ) {
