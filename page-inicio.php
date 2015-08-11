@@ -11,15 +11,15 @@
             if ( have_posts() ):
 
                 while(have_posts()): the_post(); ?>
-
-
-
                     <div class="stamp big">
+                        <a href="<?php echo get_issuem_issue_link() ?>">
                                 <span class="icon-frame">
                                     <span class="content">#<?php $data = get_issuem_issue_meta();
+
                                         echo $data["issue_order"]; ?>
                                     </span>
                                 </span>
+                        </a>
                     </div>
                     <div class="well">
                         <h2>
@@ -47,28 +47,7 @@
                     <div class="carrousel">
                         <div class="issues">
                             <?php
-                                $archives = do_issuem_archives_list();
-                               foreach ( $archives as $archive => $issue_array ) {
-                                   $issue_meta = get_option( 'issuem_issue_' . $issue_array[0]->term_id . '_meta' );
-                                   if ( 'Draft' !== $issue_meta['issue_status'] && isset($issue_meta["issue_order"])) {
-                                       if($issue_array[0]->name !== get_issuem_issue_title() ) {
-                                           ?>
-
-                                            <div class="stamp small">
-                                                        <span class="icon-frame">
-                                                            <span class="content">#<?php
-                                                                echo $issue_meta["issue_order"];
-                                                                ?>
-
-
-                                                            </span>
-                                                        </span>
-                                            </div>
-                                        <?php
-
-                                       }
-                                   }
-                               }
+                                 echo getStampsPastIssues();
                             ?>
 
 

@@ -1,5 +1,7 @@
 <?php
 
+include "issuem_hacks.php";
+
 function asyle_script_enqueue() {
 
     wp_enqueue_style('styles', get_template_directory_uri() . '/css/styles.css', array(), "1.0.0", "all");
@@ -18,7 +20,7 @@ function transliterateString($txt) {
 }
 
 function my_favicon() { ?>
-    <link rel="shortcut icon" href="<?php get_template_directory_uri() .'favicon.ico'?>" >
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() .'/favicon.ico'?>" >
 <?php }
 
 
@@ -34,525 +36,6 @@ add_action('after_setup_theme', 'asyle_theme_setup');
 
 
 
-/* IssueM */
-
-/**
- * Get issue description, assumes latest issue if no id supplied
- *
- * @since 1.0.0
- *
- * @param int $id Issue ID
- * @return string issue description
- */
-function get_issuem_issue_description( $id = false ) {
-
-    if ( !$id ) {
-
-        $issue = get_term_by( 'id', get_newest_issuem_issue_id(), 'issuem_issue' );
-        return $issue->description;
-
-    } else {
-
-        $issue = get_term_by( 'id', $id, 'issuem_issue' );
-
-        return $issue->description;
-
-    }
-
-}
-
-/**
- * Get issue count, assumes latest issue if no id supplied
- *
- * @since 1.0.0
- *
- * @param int $id Issue ID
- * @return string issue count
- */
-function get_issuem_issue_count( $id = false ) {
-
-    if ( !$id ) {
-
-        $issue = get_term_by( 'id', get_newest_issuem_issue_id(), 'issuem_issue' );
-        return $issue->count;
-
-    } else {
-
-        $issue = get_term_by( 'id', $id, 'issuem_issue' );
-
-        return $issue->count;
-
-    }
-
-}
-
-
-function get_issuem_articles_free_form( $atts, $article_format = NULL ) {
-
-    global $post;
-
-    $issuem_settings = get_issuem_settings();
-    $results = '';
-    $articles = array();
-    $post__in = array();
-
-    $defaults = array(
-        'posts_per_page'    	=> -1,
-        'offset'            	=> 0,
-        'orderby'           	=> 'menu_order',
-        'order'             	=> 'DESC',
-        'article_format'		=> empty( $article_format ) ? $issuem_settings['article_format'] : $article_format,
-        'show_featured'			=> 1,
-        'issue'					=> get_active_issuem_issue(),
-        'article_category'		=> 'all',
-        'use_category_order'	=> 'false',
-    );
-
-    // Merge defaults with passed atts
-    // Extract (make each array element its own PHP var
-    extract( shortcode_atts( $defaults, $atts ) );
-
-    $args = array(
-        'posts_per_page'	=> $posts_per_page,
-        'offset'			=> $offset,
-        'post_type'			=> 'article',
-        'orderby'			=> $orderby,
-        'order'				=> $order
-    );
-
-    if ( !$show_featured ) {
-
-        $args['meta_query'] = array(
-            'relation' => 'AND',
-            array(
-                'key' => '_featured_rotator',
-                'compare' => 'NOT EXISTS'
-            ),
-            array(
-                'key' => '_featured_thumb',
-                'compare' => 'NOT EXISTS'
-            )
-        );
-
-    }
-
-    $issuem_issue = array(
-        'taxonomy' 	=> 'issuem_issue',
-        'field' 	=> 'slug',
-        'terms' 	=> $issue
-    );
-
-    $args['tax_query'] = array(
-        $issuem_issue
-    );
-
-    if ( !empty( $issuem_settings['use_wp_taxonomies'] ) )
-        $cat_type = 'category';
-    else
-        $cat_type = 'issuem_issue_categories';
-
-    if ( 'true' === $use_category_order && 'issuem_issue_categories' === $cat_type ) {
-
-        $count = 0;
-
-        if ( 'all' === $article_category ) {
-
-            $all_terms = get_terms( 'issuem_issue_categories' );
-
-            foreach( $all_terms as $term ) {
-
-                $issue_cat_meta = get_option( 'issuem_issue_categories_' . $term->term_id . '_meta' );
-
-                if ( !empty( $issue_cat_meta['category_order'] ) )
-                    $terms[ $issue_cat_meta['category_order'] ] = $term->slug;
-                else
-                    $terms[ '-' . ++$count ] = $term->slug;
-
-            }
-
-        } else {
-
-            foreach( split( ',', $article_category ) as $term_slug ) {
-
-                $term = get_term_by( 'slug', $term_slug, 'issuem_issue_categories' );
-
-                $issue_cat_meta = get_option( 'issuem_issue_categories_' . $term->term_id . '_meta' );
-
-                if ( !empty( $issue_cat_meta['category_order'] ) )
-                    $terms[ $issue_cat_meta['category_order'] ] = $term->slug;
-                else
-                    $terms[ '-' . ++$count ] = $term->slug;
-
-            }
-
-        }
-
-        krsort( $terms );
-        $articles = array();
-
-        foreach( $terms as $term ) {
-
-            $category = array(
-                'taxonomy' 	=> $cat_type,
-                'field' 	=> 'slug',
-                'terms' 	=> $term,
-            );
-
-            $args['tax_query'] = array(
-                'relation'	=> 'AND',
-                $issuem_issue,
-                $category
-            );
-
-            $articles = array_merge( $articles, get_posts( $args ) );
-
-        }
-
-        //And we want all articles not in a category
-        $category = array(
-            'taxonomy' 	=> $cat_type,
-            'field'		=> 'slug',
-            'terms'		=> $terms,
-            'operator'	=> 'NOT IN',
-        );
-
-        $args['tax_query'] = array(
-            'relation'      => 'AND',
-            $issuem_issue,
-            $category
-        );
-
-        $articles = array_merge( $articles, get_posts( $args ) );
-
-        //Now we need to get rid of duplicates (assuming an article is in more than one category
-        if ( !empty( $articles ) ) {
-
-            foreach( $articles as $article ) {
-
-                $post__in[] = $article->ID;
-
-            }
-
-            $args['post__in']	= array_unique( $post__in );
-            $args['orderby']	= 'post__in';
-            unset( $args['tax_query'] );
-
-            $articles = get_posts( $args );
-
-        }
-
-    } else {
-
-        if ( !empty( $article_category ) && 'all' !== $article_category ) {
-
-            $category = array(
-                'taxonomy' 	=> $cat_type,
-                'field' 	=> 'slug',
-                'terms' 	=> split( ',', $article_category ),
-            );
-
-            $args['tax_query'] = array(
-                'relation'	=> 'AND',
-                $issuem_issue,
-                $category
-            );
-
-        }
-
-        $articles = get_posts( $args );
-
-    }
-
-    $results .= '';
-
-    if ( $articles ) :
-
-        $old_post = $post;
-
-        foreach( $articles as $article ) {
-
-            $post = $article;
-            setup_postdata( $article );
-
-            $results .= '';
-            $results .= "\n" . issuem_replacements_args_free_form( $article_format, $post ) . "\n";
-            $results .= '';
-
-        }
-
-        if ( get_option( 'issuem_api_error_received' ) )
-            $results .= '<div class="api_error"><p><a href="http://issuem.com/" target="_blank">' . __( 'Issue Management by ', 'issuem' ) . 'IssueM</a></div>';
-
-        $post = $old_post;
-
-    else :
-
-        $results .= apply_filters( 'issuem_no_articles_found_shortcode_message', '<h1 class="issuem-entry-title no-articles-found">' . __( 'No articles Found', 'issuem' ) . '</h1>' );
-
-    endif;
-
-    $results .= '';
-
-    wp_reset_postdata();
-
-    return $results;
-
-}
-
-/**
- * Replaces variables with WordPress content
- *
- * @since 1.0.0
- *
- * @param int $id User ID
- */
-function issuem_replacements_args_free_form( $string, $post ) {
-
-    $issuem_settings = get_issuem_settings();
-
-    if ( !empty( $issuem_settings['use_wp_taxonomies'] ) ) {
-
-        $tags = 'post_tag';
-        $cats = 'category';
-
-    } else {
-
-        $tags = 'issuem_issue_tags';
-        $cats = 'issuem_issue_categories';
-
-    }
-
-    $string = str_ireplace( '%TITLE%', get_the_title(), $string );
-    $string = str_ireplace( '%URL%', apply_filters( 'issuem_article_url', get_permalink( $post->ID ), $post->ID ), $string );
-
-    if ( preg_match( '/%CATEGORY\[?(\d*)\]?%/i', $string, $matches ) ) {
-
-        $post_cats = get_the_terms( $post->ID, $cats );
-        $categories = '';
-
-        if ( $post_cats && !is_wp_error( $post_cats ) ) :
-
-            if ( !empty( $matches[1] ) )
-                $max_cats = $matches[1];
-            else
-                $max_cats = 0;
-
-            $cat_array = array();
-
-            $count = 1;
-            foreach ( $post_cats as $post_cat ) {
-
-                $cat_array[] = $post_cat->name;
-
-                if ( 0 != $max_cats && $max_cats <= $count )
-                    break;
-
-                $count++;
-
-            }
-
-            $categories = join( ", ", $cat_array );
-
-        endif;
-
-        $string = preg_replace( '/%CATEGORY\[?(\d*)\]?%/i', $categories, $string );
-
-    }
-
-    if ( preg_match( '/%TAG\[?(\d*)\]?%/i', $string, $matches ) ) {
-
-        $post_tags = get_the_terms( $post->ID, $tags );
-        $tag_string = '';
-
-        if ( $post_tags && !is_wp_error( $post_tags ) ) :
-
-            if ( !empty( $matches[1] ) )
-                $max_tags = $matches[1];
-            else
-                $max_tags = 0;
-
-            $cat_array = array();
-
-            $count = 1;
-            foreach ( $post_tags as $post_tag ) {
-
-                $cat_array[] = $post_tag->name;
-
-                if ( 0 != $max_tags && $max_tags <= $count )
-                    break;
-
-                $count++;
-
-            }
-
-            $tag_string = join( ", ", $cat_array );
-
-        endif;
-
-        $string = preg_replace( '/%TAG\[?(\d*)\]?%/i', $tag_string, $string );
-
-    }
-
-    if ( preg_match( '/%TEASER%/i', $string, $matches ) ) {
-
-        if ( $teaser = get_post_meta( $post->ID, '_teaser_text', true ) )
-            $string = preg_replace( '/%TEASER%/i', $teaser, $string );
-        else
-            $string = preg_replace( '/%TEASER%/i', '%EXCERPT%', $string );	// If no Teaser Text exists, try to get an excerpt
-
-    }
-
-    if ( preg_match( '/%EXCERPT\[?(\d*)\]?%/i', $string, $matches ) ) {
-
-        if ( empty( $post->post_excerpt ) )
-            $excerpt = get_the_content();
-        else
-            $excerpt = $post->post_excerpt;
-
-        $excerpt = strip_shortcodes( $excerpt );
-        $excerpt = apply_filters( 'the_content', $excerpt );
-        $excerpt = str_replace( ']]>', ']]&gt;', $excerpt );
-
-        if ( !empty( $matches[1] ) )
-            $excerpt_length = $matches[1];
-        else
-            $excerpt_length = apply_filters('excerpt_length', 55);
-
-        $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
-        $excerpt = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
-
-        $string = preg_replace( '/%EXCERPT\[?(\d*)\]?%/i', $excerpt, $string );
-
-    }
-
-    if ( preg_match( '/%CONTENT%/i', $string, $matches ) ) {
-
-        $content = get_the_content();
-        $content = apply_filters( 'the_content', $content );
-        $content = str_replace( ']]>', ']]&gt;', $content );
-        $string = preg_replace( '/%CONTENT%/i', $content, $string );
-
-    }
-
-    if ( preg_match( '/%FEATURE_IMAGE%/i', $string, $matches ) ) {
-
-        $image = get_the_post_thumbnail( $post->ID );
-        $string = preg_replace( '/%FEATURE_IMAGE%/i', $image, $string );
-
-    }
-
-    if ( preg_match( '/%ISSUEM_FEATURE_THUMB%/i', $string, $matches ) ) {
-
-        $image = get_the_post_thumbnail( $post->ID, 'issuem-featured-thumb-image' );
-        $string = preg_replace( '/%ISSUEM_FEATURE_THUMB%/i', $image, $string );
-
-    }
-
-    if ( preg_match( '/%BYLINE%/i', $string, $matches ) ) {
-
-        $author_name = get_issuem_author_name( $post );
-
-        $byline = sprintf( __( '%s', 'issuem' ), apply_filters( 'issuem_author_name', $author_name, $post->ID ) );
-
-        $string = preg_replace( '/%BYLINE%/i', $byline, $string );
-
-    }
-
-    if ( preg_match( '/%DATE%/i', $string, $matches ) ) {
-
-        $post_date = get_the_date( '', $post->ID );
-        $string = preg_replace( '/%DATE%/i', $post_date, $string );
-
-    }
-
-    $string = apply_filters( 'issuem_custom_replacement_args', $string, $post );
-
-    return stripcslashes( $string );
-
-}
-
-
-/**
- * Outputs Issue Archives HTML from shortcode call
- *
- * @since 1.0.0
- *
- * @param array $atts Arguments passed through shortcode
- * @return string HTML output of Issue Archives
- */
-function do_issuem_archives_list( $atts ) {
-
-    $issuem_settings = get_issuem_settings();
-
-    $defaults = array(
-        'orderby' 		=> 'issue_order',
-        'order'			=> 'DESC',
-        'limit'			=> 0,
-        'pdf_title'		=> $issuem_settings['pdf_title'],
-        'default_image'	=> $issuem_settings['default_issue_image'],
-        'args'			=> array( 'hide_empty' => 0 ),
-    );
-    extract( shortcode_atts( $defaults, $atts ) );
-
-    if ( is_string( $args ) ) {
-        $args = str_replace( '&amp;', '&', $args );
-        $args = str_replace( '&#038;', '&', $args );
-    }
-
-    $args = apply_filters( 'do_issuem_archives_get_terms_args', $args );
-    $issuem_issues = get_terms( 'issuem_issue', $args );
-    $archives = array();
-    $archives_no_issue_order = array();
-
-    foreach ( $issuem_issues as $issue ) {
-
-        $issue_meta = get_option( 'issuem_issue_' . $issue->term_id . '_meta' );
-
-        // If issue is not a Draft, add it to the archive array;
-        if ( !empty( $issue_meta['issue_status'] ) && ( 'Draft' !== $issue_meta['issue_status'] || current_user_can( apply_filters( 'see_issuem_draft_issues', 'manage_issues' ) ) ) ) {
-
-            switch( $orderby ) {
-
-                case "issue_order":
-                    if ( !empty( $issue_meta['issue_order'] ) )
-                        $archives[ $issue_meta['issue_order'] ] = array( $issue, $issue_meta );
-                    else
-                        $archives_no_issue_order[] = array( $issue, $issue_meta );
-                    break;
-
-                case "name":
-                    $archives[ $issue_meta['name'] ] = array( $issue, $issue_meta );
-                    break;
-
-                case "term_id":
-                    $archives[ $issue->term_id ] = array( $issue, $issue_meta );
-                    break;
-
-            }
-
-        }
-
-    }
-
-    if ( 'issue_order' == $orderby && !empty( $archives_no_issue_order ) )
-        $archives = array_merge( $archives_no_issue_order, $archives );
-
-    if ( "DESC" == $order )
-        krsort( $archives );
-    else
-        ksort( $archives );
-
-    $archive_count = count( $archives ) - 1; //we want zero based
-
-    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-    if ( !empty( $limit ) ) {
-        $offset = ( $paged - 1 ) * $limit;
-        $archives = array_slice( $archives, $offset, $limit );
-    }
-
-    return $archives;
-
-}
 
 // custom menu example @ https://digwp.com/2011/11/html-formatting-custom-menus/
 function clean_custom_menus($m, $current_url) {
@@ -586,9 +69,220 @@ function clean_custom_menus($m, $current_url) {
 }
 
 
+function get_authors_list($prole, $classul, $actual) {
+    $display_admins = true;
+    $order_by = 'display_name'; // 'nicename', 'email', 'url', 'registered', 'display_name', or 'post_count'
+    $role = $prole || ""; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
+    $avatar_size = 64;
+    $hide_empty = false; // hides authors with zero posts
+
+    if(!empty($display_admins)) {
+        $blogusers = get_users('orderby='.$order_by.'&role='.$role);
+    } else {
+        $admins = get_users('role=administrator');
+        $exclude = array();
+        foreach($admins as $ad) {
+            $exclude[] = $ad->ID;
+        }
+        $exclude = implode(',', $exclude);
+        $blogusers = get_users('exclude='.$exclude.'&orderby='.$order_by.'&role='.$role);
+    }
+    $authors = array();
+    foreach ($blogusers as $bloguser) {
+        $user = get_userdata($bloguser->ID);
+        if(!empty($hide_empty)) {
+            $numposts = count_user_posts($user->ID);
+            if($numposts < 1) continue;
+        }
+        $authors[] = (array) $user;
+    }
+
+    echo '<ul class="'.$classul.'">';
+    foreach($authors as $author) {
+
+        $display_name = $author["data"]->display_name;
+//        $description = $author['description'];
+//        $avatar = get_avatar($author['ID'], $avatar_size);
+        $author_profile_url = get_author_posts_url($author['ID']);
+
+
+        //echo '<li><h3>'.$display_name.'</h3><a href="', $author_profile_url, '">', $avatar , '</a><p>'.$description.'</p><p><a href="', $author_profile_url, '" class="contributor-link">➤ Posts by '.$display_name.'</a></p></li>';
+
+        $class = "";
+        if($actual === $display_name) { $class = "active"; }
+
+        echo '<li><a class="'. $class .'" href="', $author_profile_url, '">'.$display_name.'</a></li>';
+    }
+    echo '</ul>';
+}
+
+
+function get_authors_stamps($prole, $classul, $actual) {
+    $display_admins = true;
+    $order_by = 'display_name'; // 'nicename', 'email', 'url', 'registered', 'display_name', or 'post_count'
+    $role = $prole || ""; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
+    $avatar_size = 115;
+    $hide_empty = false; // hides authors with zero posts
+
+    if(!empty($display_admins)) {
+        $blogusers = get_users('orderby='.$order_by.'&role='.$role);
+    } else {
+        $admins = get_users('role=administrator');
+        $exclude = array();
+        foreach($admins as $ad) {
+            $exclude[] = $ad->ID;
+        }
+        $exclude = implode(',', $exclude);
+        $blogusers = get_users('exclude='.$exclude.'&orderby='.$order_by.'&role='.$role);
+    }
+    $authors = array();
+    foreach ($blogusers as $bloguser) {
+        $user = get_userdata($bloguser->ID);
+        if(!empty($hide_empty)) {
+            $numposts = count_user_posts($user->ID);
+            if($numposts < 1) continue;
+        }
+        $authors[] = (array) $user;
+    }
+
+    echo '<ul class="'.$classul.'">';
+    foreach($authors as $author) {
+
+        $display_name = $author["data"]->display_name;
+//        $description = $author['description'];
+        $avatar = get_avatar($author['ID'], $avatar_size);
+        $author_profile_url = get_author_posts_url($author['ID']);
+
+
+        //echo '<li><h3>'.$display_name.'</h3><a href="', $author_profile_url, '">', $avatar , '</a><p>'.$description.'</p><p><a href="', $author_profile_url, '" class="contributor-link">➤ Posts by '.$display_name.'</a></p></li>';
+
+        $class = "";
+        if($actual === $display_name) { $class = "active"; }
+
+        echo "<li>";
+        echo '        <div class="stamp small"><a href="'.$author_profile_url.'"';
+
+        echo '                            <span class="icon-frame">';
+        echo '                                <span class="content">';
+        echo $avatar;
+        echo '                                </span>';
+        echo '                            </span>';
+        echo '</a>        </div>';
+        echo '<span class="name">'.$display_name.'</span>';
+        echo '</li>';
+    }
+    echo '</ul>';
+}
 
 
 
+function getListOfArticlesByAuthor($id,$className) {
+    $args = array(
+        'author'        =>  $id, // I could also use $user_ID, right?
+        'orderby'       =>  'post_date',
+        'order'         =>  'ASC',
+        'post_type' => 'article'
+    );
 
-?>
+    // get his posts 'ASC'
+    $current_user_posts = get_posts( $args );
 
+
+    if(sizeof($current_user_posts)) {
+
+        echo "<ul class='".$className."'>";
+        foreach ( $current_user_posts as $post ) {
+            echo "<li><a href='" . get_permalink($post->ID). "'</a>".$post->post_title ."</li>";
+        }
+        echo "</ul>";
+    }
+
+}
+
+
+function template_chooser($template)
+{
+    global $wp_query;
+    $post_type = get_query_var('post_type');
+    if( $wp_query->is_search && $post_type == 'article' )
+    {
+        return locate_template('search-article.php');  //  redirect to archive-search.php
+    }
+    return $template;
+}
+add_filter('template_include', 'template_chooser');
+
+
+/**
+ * Search SQL filter for matching against post title only.
+ *
+ * @link    http://wordpress.stackexchange.com/a/11826/1685
+ *
+ * @param   string      $search
+ * @param   WP_Query    $wp_query
+ */
+function wpse_11826_search_by_title( $search, $wp_query ) {
+    if ( ! empty( $search ) && ! empty( $wp_query->query_vars['search_terms'] ) ) {
+        global $wpdb;
+
+        $q = $wp_query->query_vars;
+        $n = ! empty( $q['exact'] ) ? '' : '%';
+
+        $search = array();
+
+        foreach ( ( array ) $q['search_terms'] as $term ) {
+            if($term != "all") {
+                $search[] = $wpdb->prepare( "$wpdb->posts.post_title LIKE %s", $wpdb->esc_like( $term ) . $n );
+            } else {
+                return "";
+            }
+        }
+
+
+        if ( ! is_user_logged_in() )
+            $search[] = "$wpdb->posts.post_password = ''";
+
+        $search = ' AND ' . implode( ' AND ', $search );
+    }
+
+
+
+    return $search;
+}
+
+add_filter( 'posts_search', 'wpse_11826_search_by_title', 10, 2 );
+
+add_filter('posts_orderby','my_sort_custom',10,2);
+function my_sort_custom( $orderby, $query ){
+    global $wpdb;
+
+    if(!is_admin() && is_search())
+        $orderby =  $wpdb->prefix."posts.post_title ASC";
+
+    return  $orderby;
+}
+
+
+function get_search_letters() {
+
+    $queryString = "ABCDEFGHIJKLMN'OPQRSTUVWXYZ";
+
+    echo '<ul class="pagination text">';
+
+    echo  '<li><a href="'.get_site_url().'?s=all&post_type=article">Todos</a></li>';
+
+    for($i=0;$i<=strlen($queryString)-1;$i++) {
+
+        $letter = substr($queryString, $i, 1);
+
+        if($letter == "'") {
+            $letter = "Ñ";
+        }
+        echo  '<li><a href="'.get_site_url().'?s='.$letter.'&post_type=article">'.$letter.'</a></li>';
+
+    }
+
+    echo '</ul>';
+
+
+}

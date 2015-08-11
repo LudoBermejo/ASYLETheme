@@ -37,4 +37,8 @@ ul.names {
     }
     ul.names a:hover {
         color: #ee7457;
-    } 
+    }
+
+    ul.names a.active {
+        color: #ee7457;
+    }

@@ -39,6 +39,10 @@
     padding-left: 167px;
 }
 
+.author .list_of_articles {
+    padding-left: 167px!important;
+}
+
 
 /* ESSAYS PAGE (home + internal) */
 .essays .sidebar .stamp {
