@@ -13,7 +13,7 @@
                 <li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>
                 <?php
                 $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
-                echo get_issuem_articles_free_form([], $line);
+                echo get_issuem_articles_free_form("", $line);
 
                 ?>
 
