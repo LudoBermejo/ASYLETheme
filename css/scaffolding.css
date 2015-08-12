@@ -49,6 +49,12 @@ header.main {
             line-height: 125px;
             font-weight: 600;
     }
+
+        header.main .logo a {
+            color: #231f20;
+            text-decoration: none;
+        }
+
         header.main .logo span {
                 font-family: "icomoon";
                 color: #67668b;

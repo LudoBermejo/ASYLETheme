@@ -12,7 +12,7 @@
         <header class="main">
             <div class="inner">
                 <div class="logo">
-                    as<span class="icon-and"></span>le
+                    <a href="<?php echo get_site_url();?> ">as<span class="icon-and"></span>le</a>
                 </div>
 
                 <?php if (function_exists(clean_custom_menus)) clean_custom_menus("primary", get_permalink( $post->ID )); ?>
