@@ -76,8 +76,11 @@ function get_issuem_issue_count( $id = false ) {
 }
 
 
-function get_issuem_articles_free_form( $atts, $article_format = NULL ) {
+function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = "" ) {
 
+    if(!($issue)) {
+        $issue = get_active_issuem_issue();
+    }
     global $post;
 
     $issuem_settings = get_issuem_settings();
@@ -92,7 +95,7 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL ) {
         'order'             	=> 'DESC',
         'article_format'		=> empty( $article_format ) ? $issuem_settings['article_format'] : $article_format,
         'show_featured'			=> 1,
-        'issue'					=> get_active_issuem_issue(),
+        'issue'					=> $issue,
         'article_category'		=> 'all',
         'use_category_order'	=> 'false',
     );
@@ -604,6 +607,91 @@ function getStampsPastIssues() {
                 $result .= '</span">'.'</a>';
                 $result .= '</div">';
             }
+        }
+    }
+
+    return $result;
+
+}
+
+
+function getStampsAllIssues() {
+
+    $archives = do_issuem_archives_list("");
+
+    $result = "";
+    foreach ( $archives as $archive => $issue_array ) {
+
+        if ( 0 == $issuem_settings['page_for_articles'] )
+            $article_page = get_bloginfo( 'wpurl' ) . '/' . apply_filters( 'issuem_page_for_articles', 'article/' );
+        else
+            $article_page = get_page_link( $issuem_settings['page_for_articles'] );
+
+        $issue_url = get_term_link( $issue_array[0], 'issuem_issue' );
+        if ( !empty( $issuem_settings['use_issue_tax_links'] ) || is_wp_error( $issue_url ) ) {
+            $issue_url = add_query_arg( 'issue', $issue_array[0]->slug, $article_page );
+        }
+
+        if ( !empty( $issue_array[1]['pdf_version'] ) || !empty( $issue_meta['external_pdf_link'] ) ) {
+
+            $pdf_url = empty( $issue_meta['external_pdf_link'] ) ? apply_filters( 'issuem_pdf_attachment_url', wp_get_attachment_url( $issue_array[1]['pdf_version'] ), $issue_array[1]['pdf_version'] ) : $issue_meta['external_pdf_link'];
+
+            $pdf_line = '<a href="' . $pdf_url . '" target="' . $issuem_settings['pdf_open_target'] . '">';
+
+            if ( 'PDF Archive' == $issue_array[1]['issue_status'] ) {
+
+                $issue_url = $pdf_url;
+                $pdf_line .= empty( $pdf_only_title ) ? $issuem_settings['pdf_only_title'] : $pdf_only_title;
+
+            } else {
+
+                $pdf_line .= empty( $pdf_title ) ? $issuem_settings['pdf_title'] : $pdf_title;
+
+            }
+
+            $pdf_line .= '</a>';
+
+        } else {
+
+            $pdf_line = apply_filters( 'issuem_pdf_version', '&nbsp;', $pdf_title, $issue_array[0] );
+
+        }
+
+        if ( !empty( $issue_meta['external_link'] ) )
+            $issue_url = apply_filters( 'archive_issue_url_external_link', $issue_meta['external_link'], $issue_url );
+
+
+
+        $issue_meta = get_option( 'issuem_issue_' . $issue_array[0]->term_id . '_meta' );
+        if ( 'Draft' !== $issue_meta['issue_status'] && isset($issue_meta["issue_order"])) {
+
+
+                $result .= '<div class="stamp big"><a href="'.$issue_url.'">';
+                $result .= '<span class="icon-frame">';
+                $result .= '<span class="content">#';
+                $result .= $issue_meta["issue_order"];
+                $result .= '</span">';
+                $result .= '</span">'.'</a>';
+                $result .= '</div>';
+
+                $result .= '<div class="well">';
+                    $result .= '<h2>';
+                    $result .= $issue_array[0]->name;
+                    $result .= '<small>';
+                    $result .= 'Agosto 2015';
+                    $result .= '</small>';
+                    $result .= '</h2>';
+                    $result .= '<blockquote>';
+                    $result .= $issue_array[0]->description;
+                    $result .= '</blockquote>';
+                $result .= '</div>';
+
+                $result .= '<ul class="sumary">';
+                $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+
+                $result .= get_issuem_articles_free_form("", $line, $issue_array[0]->slug);
+                $result .= '</ul>';
+
         }
     }
 
