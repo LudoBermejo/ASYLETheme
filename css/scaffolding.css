@@ -98,6 +98,7 @@ header.main {
 			line-height: 36px;
 			margin-bottom: 18px;
 		}
+	}
 	@media only screen and (max-width: 540px) {
 		header.main {
 			height: 143px;
