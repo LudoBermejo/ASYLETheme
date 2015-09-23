@@ -25,6 +25,17 @@ body > .wrapper > .wrapper-inner {
     padding-bottom: 54px;
 }
 
+	
+	@media only screen and (max-width: 1200px) {
+		body {
+			background-image: none;
+		}
+		body > .wrapper > .wrapper-inner {
+			width: 100%;
+			background: red;
+		}
+	}
+
 
 /* HEADER */
 header.main {
@@ -49,12 +60,10 @@ header.main {
             line-height: 125px;
             font-weight: 600;
     }
-
-        header.main .logo a {
-            color: #231f20;
-            text-decoration: none;
-        }
-
+	header.main .logo a {
+		color: #231f20;
+		text-decoration: none;
+	}
         header.main .logo span {
                 font-family: "icomoon";
                 color: #67668b;
@@ -67,6 +76,40 @@ header.main {
         display: block; 
         margin: 0 auto;
     }
+	@media only screen and (max-width: 1200px) {
+		header.main {
+			padding-top: 54px;
+			margin-bottom: 18px;
+		}
+		header.main > .inner {
+				width: 100%;
+
+		}
+		header.main .logo {
+			width: 20%; 
+			text-align:	center;
+		}
+
+	}
+	@media only screen and (max-width: 768px) {
+		header.main .logo {
+			float: none;
+			height: 36px; 
+			line-height: 36px;
+			margin-bottom: 18px;
+		}
+	@media only screen and (max-width: 540px) {
+		header.main {
+			height: 143px;
+		}		
+		header.main .logo {
+			width: 100%; 
+			text-align:	center;
+		}		
+		header .nav li {
+			width: 33.33%;
+		}
+	}
 
 /* FOOTER */
 footer.main {

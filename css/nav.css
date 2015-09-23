@@ -37,8 +37,38 @@ ul.names {
     }
     ul.names a:hover {
         color: #ee7457;
-    }
-
+    } 
     ul.names a.active {
         color: #ee7457;
     }
+	
+	@media only screen and (max-width: 1200px) {
+		header .nav {
+			width: 80%;
+			float: left;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		header .nav {
+			width: 100%;
+			clear: both;
+		}
+		header .nav li {
+			width: 16.66%;
+			height: 36px; 
+			line-height: 36px;
+			float: left;
+		}
+		header .nav a {
+			margin-top: 9px;
+		}
+		ul.nav .wrapper-icon {
+			display: none;
+		}
+
+	}
+	@media only screen and (max-width: 540px) {
+		header .nav li {
+			width: 33.33%;
+		}
+	}
