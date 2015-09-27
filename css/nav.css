@@ -47,6 +47,9 @@ ul.names {
 			width: 80%;
 			float: left;
 		}
+		ul.names {
+			padding-left: 176px;
+		}
 	}
 	@media only screen and (max-width: 768px) {
 		header .nav {
@@ -64,6 +67,9 @@ ul.names {
 		}
 		ul.nav .wrapper-icon {
 			display: none;
+		}
+		ul.names {
+			padding-left: 0;
 		}
 
 	}
