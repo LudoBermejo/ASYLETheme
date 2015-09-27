@@ -1,5 +1,16 @@
 <?php get_header() ?>
 <div class="wrapper-inner essays">
+
+	<div class="content">
+
+		<?php while ( have_posts() ) : the_post(); ?>
+
+
+			<?php get_template_part( 'content', 'article');?>
+
+		<?php endwhile; // end of the loop. ?>
+
+	</div>
 	<div class="sidebar">
 		<div class="stamp small">
                 <span class="icon-frame">
@@ -19,19 +30,6 @@
 
 
 		</ul>
-	</div>
-	<div class="content">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-
-			<?php get_template_part( 'content', 'article');?>
-
-		<?php endwhile; // end of the loop. ?>
-
-
-
-
-	</div>
+	</div>    
 </div>
 <?php get_footer() ?>

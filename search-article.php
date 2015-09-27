@@ -1,8 +1,6 @@
 <?php get_header() ?>
 	<div class="wrapper-inner essays">
-		<div class="sidebar">
 
-		</div>
 		<div class="content">
 			<?php
 			if ( have_posts() ):
@@ -19,6 +17,9 @@
 			<?php endwhile;
 			endif
 			?>
+		</div>
+		<div class="sidebar">
+
 		</div>
 	</div>
 <?php get_footer() ?>
