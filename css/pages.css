@@ -75,6 +75,18 @@
 .essays .content p {
     font-weight: 200;
 }
+	@media only screen and (max-width: 1200px) {
+		.essays .sidebar {
+			width: 90%;
+			margin: 0 auto;
+			float: none;
+		}
+		.essays .sidebar .stamp {
+			float: left;
+			margin-right: 36px;
+		}
+
+	}
 
 
 

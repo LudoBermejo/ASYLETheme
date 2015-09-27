@@ -211,7 +211,8 @@ ul.pagination {
         ul.pagination.text a {
             padding: 0 9px;
         }
-        ul.pagination.number a {
+        ul.pagination.number a,
+		ul.pagination.number span {
             padding: 0 35px;
         }
 
