@@ -181,6 +181,11 @@ footer.main {
     .well blockquote {
         font-weight: 200;
     }
+	@media only screen and (max-width: 1200px) {
+		.well {
+			box-sizing: border-box;
+		}
+	}	
 
 /* PAGINATION */
 ul.pagination {
