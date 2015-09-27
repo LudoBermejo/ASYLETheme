@@ -1,6 +1,6 @@
 <?php get_header() ?>
     <div class="wrapper-inner">
-        <div class="sidebar"></div>
+        
         <div class="content">
             <h1><span class="icon-comillas wrapper-icon"></span> Equipo</h1>
             <ul class="gallery">
@@ -141,5 +141,6 @@
             </ul>
 
         </div>
+		<div class="sidebar"></div>
     </div>
 <?php get_footer() ?>

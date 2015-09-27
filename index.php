@@ -1,9 +1,6 @@
 <?php get_header() ?>
     <div class="wrapper-inner home">
-        <div class="sidebar">
-            <p><span class="icon-exclamacion wrapper-icon"></span></p>
-            <p>As&amp;le es una revista literaria creada por aulunos del taller de escritura creativa de Clara Obligado</p>
-        </div>
+
         <div class="content">
 
             <?php
@@ -100,6 +97,10 @@
                 </div>
             </div>
         </div>-->
+    </div>
+    <div class="sidebar">
+        <p><span class="icon-exclamacion wrapper-icon"></span></p>
+        <p>As&amp;le es una revista literaria creada por aulunos del taller de escritura creativa de Clara Obligado</p>
     </div>
 <!--<script>
     $('.issues').slick({

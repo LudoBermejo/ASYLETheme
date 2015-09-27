@@ -1,9 +1,5 @@
 <?php get_header() ?>
     <div class="wrapper-inner home">
-        <div class="sidebar">
-            <p><span class="icon-inicio wrapper-icon"></span></p>
-            <p><strong>A sangre y letras</strong> es una revista literaria creada por alumnos del <a href="http://escrituracreativa.com/">taller de escritura creativa de Clara Obligado</a></p>
-        </div>
         <div class="content">
 
 
@@ -59,6 +55,10 @@
             endif
             ?>
 
+        </div>
+        <div class="sidebar">
+            <p><span class="icon-inicio wrapper-icon"></span></p>
+            <p><strong>A sangre y letras</strong> es una revista literaria creada por alumnos del <a href="http://escrituracreativa.com/">taller de escritura creativa de Clara Obligado</a></p>
         </div>
     </div>
 <!--<script>

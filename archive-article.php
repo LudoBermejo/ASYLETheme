@@ -1,9 +1,7 @@
 <?php get_header() ?>
 
 	<div class="wrapper-inner essays">
-		<div class="sidebar">
 
-		</div>
 		<div class="content">
 
 			<?php
@@ -58,6 +56,9 @@
 				<li><a href="#">9</a></li>
 				<li><a href="#">10</a></li>
 			</ul>
+		</div>
+		<div class="sidebar">
+
 		</div>
 	</div>
 <?php get_footer() ?>

@@ -1,7 +1,6 @@
 <?php get_header() ?>
 <div class="wrapper-inner home">
-    <div class="sidebar">
-    </div>
+
     <div class="content">
 
 
@@ -61,6 +60,8 @@
         endif
         ?>
 
+    </div>
+    <div class="sidebar">
     </div>
 </div>
 <!--<script>

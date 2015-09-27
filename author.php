@@ -5,10 +5,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 ?>
 
 <div class="wrapper-inner author">
-	<div class="sidebar">
-		<?php echo get_authors_list("", "names", $curauth->display_name); ?>
 
-	</div>
 	<div class="content">
 		<div class="stamp small">
                             <span class="icon-frame">
@@ -32,6 +29,10 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 		</div>
 
 	</div>
+	<div class="sidebar">
+		<?php echo get_authors_list("", "names", $curauth->display_name); ?>
+
+	</div>    
 
 
 <?php
