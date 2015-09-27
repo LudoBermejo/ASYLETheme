@@ -88,7 +88,6 @@ header.main {
 			width: 20%; 
 			text-align:	center;
 		}
-
 	}
 	@media only screen and (max-width: 768px) {
 		header.main .logo {
@@ -96,6 +95,7 @@ header.main {
 			height: 36px; 
 			line-height: 36px;
 			margin-bottom: 18px;
+			width: 100%;
 		}
 	}
 	@media only screen and (max-width: 540px) {
@@ -110,6 +110,9 @@ header.main {
 			width: 33.33%;
 		}
 	}
+
+	
+
 
 /* FOOTER */
 footer.main {
@@ -129,12 +132,24 @@ footer.main {
     float: left;
     
 }
+	@media only screen and (max-width: 1200px) {
+		.sidebar {
+			width: 100%;
+		}
+	}
 
 /* CONTAIN */
 .content {
     width: 948px;
     float: right;
 }
+	@media only screen and (max-width: 1200px) {
+		.content {
+			width: 90%;
+			margin: 0 auto;
+			float: none;
+		}
+	}
 
 /* ROUNDED  ICON */
 .wrapper-icon {
@@ -149,10 +164,6 @@ footer.main {
 	color: #fff;
 	text-align: center;
         letter-spacing: initial !important;
-}
-
-.wrapper-icon-selected {
-    background: #ee7457;
 }
     a:hover span.wrapper-icon {
             background: #ee7457;
@@ -204,28 +215,6 @@ ul.pagination {
             padding: 0 35px;
         }
 
-        ul.pagination span.disabled {
-            padding: 0 35px;
-            /* Theoretically for IE 8 & 9 (more valid) */
-            /* ...but not required as filter works too */
-            /* should come BEFORE filter */
-            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-
-            /* This works in IE 8 & 9 too */
-            /* ... but also 5, 6, 7 */
-            filter: alpha(opacity=50);
-
-            /* Older than Firefox 0.9 */
-            -moz-opacity:0.5;
-
-            /* Safari 1.x (pre WebKit!) */
-            -khtml-opacity: 0.5;
-
-            /* Modern!
-            /* Firefox 0.9+, Safari 2?, Chrome any?
-            /* Opera 9+, IE 9+ */
-            opacity: 0.5;
-        }
 
 
 /* CONTENT LIST INLINE */
@@ -255,8 +244,14 @@ ul.sumary {
         }
         ul.sumary strong:after {
             content: ",";
-
+            margin-right: 5px;
         }
+	@media only screen and (max-width: 1200px) {
+		ul.sumary {
+			margin-top: 36px;
+		}
+	}
+		
 
 /* STAMP */
 .stamp {

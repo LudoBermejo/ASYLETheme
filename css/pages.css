@@ -13,6 +13,30 @@
 .home .carrousel .stamp {
     margin-bottom: 0;
 }
+	@media only screen and (max-width: 1200px) {
+		.home .content {
+			width: 90%;
+			margin: 0 auto;
+			float: none;
+		}
+		.home .stamp.big {
+			display: none;
+		}
+		.home .well {
+			float: none;
+			width: 90%;
+			margin: 0 auto;
+
+		}
+		.home .sidebar {
+			width: 100%;
+			padding: 5%;
+			box-sizing: border-box;
+		}
+		.home .sidebar p {
+			display: inline-block;
+		}
+	}
 
 
 /* TEAM PAGE */
@@ -37,10 +61,6 @@
     font-size: 16px;
     font-weight: 200;
     padding-left: 167px;
-}
-
-.author .list_of_articles {
-    padding-left: 167px!important;
 }
 
 
