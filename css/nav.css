@@ -50,25 +50,7 @@ ul.names {
 		ul.names {
 			padding-left: 176px;
 		}
-	}
-	@media only screen and (max-width: 768px) {
-		header .nav {
-			width: 100%;
-			clear: both;
-		}
-		header .nav li {
-			width: 16.66%;
-			height: 36px; 
-			line-height: 36px;
-			float: left;
-		}
-		header .nav a {
-			margin-top: 9px;
-		}
-		ul.nav .wrapper-icon {
-			display: none;
-		}
-		ul.names {
+		.sidebar ul.names {
 			padding-left: 0;
 		}
 		
@@ -89,7 +71,26 @@ ul.names {
 		}		
 		.sidebar ul.names li:last-child:after{
 			content: " | ";
-		}		
+		}	
+	}
+	@media only screen and (max-width: 768px) {
+		header .nav {
+			width: 100%;
+			clear: both;
+		}
+		header .nav li {
+			width: 16.66%;
+			height: 36px; 
+			line-height: 36px;
+			float: left;
+		}
+		header .nav a {
+			margin-top: 9px;
+		}
+		ul.nav .wrapper-icon {
+			display: none;
+		}
+			
 
 	}
 	@media only screen and (max-width: 540px) {
