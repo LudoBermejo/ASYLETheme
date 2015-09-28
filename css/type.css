@@ -34,12 +34,20 @@ h2:before {
     left: 0;
     top: 0;
 }
+	@media only screen and (max-width: 768px) {
+		.author  h2 {
+			display: block;
+		}
+		.author  h2:before {
+			content: '';
+		}
+	}
+
 
 a {
-    color: #37210E;
+    color: #503a27;
     text-decoration: none;
 }
-
 a:hover {
     color: #ee7457;
 }
