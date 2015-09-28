@@ -76,9 +76,12 @@ ul.names {
 			width: 90%;
 			margin: 0 auto;
 			text-align: center;
-		}
+		} 
 		.sidebar ul.names li {
 			display: inline-block;
+		}
+		.sidebar ul.names li.title {
+			margin-bottom: 0;
 		}
 		.sidebar ul.names li:after {
 			content: " | ";
