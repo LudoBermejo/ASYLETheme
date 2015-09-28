@@ -83,7 +83,7 @@
 	@media only screen and (max-width: 1200px) {
 		.essays .sidebar {
 			width: 90%;
-			margin: 0 auto;
+			margin: 36px auto 0;
 			float: none;
 		}
 		.essays .sidebar .stamp {
