@@ -71,6 +71,22 @@ ul.names {
 		ul.names {
 			padding-left: 0;
 		}
+		
+		.sidebar ul.names {
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.sidebar ul.names li {
+			display: inline-block;
+		}
+		.sidebar ul.names li:after {
+			content: " | ";
+			margin: 0 10px;
+		}		
+		.sidebar ul.names li:last-child:after{
+			content: " | ";
+		}		
 
 	}
 	@media only screen and (max-width: 540px) {
