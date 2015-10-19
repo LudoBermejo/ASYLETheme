@@ -4,7 +4,7 @@
 
             <div class="inicio-index">
                 <h2>Los artículos</h2>
-                <ul class="sumary">
+                <ul class="names">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
 
@@ -20,7 +20,7 @@
                 </div>
             <div class="inicio-index">
                 <h2>Las entrevistas</h2>
-                <ul class="sumary">
+                <ul class="names">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
 
@@ -36,7 +36,7 @@
                 </div>
             <div class="inicio-index">
                 <h2>Los cuentos</h2>
-                <ul class="sumary">
+                <ul class="names">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
 
