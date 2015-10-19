@@ -270,7 +270,7 @@ ul.sumary {
 .stamp {
     display: block;
 }
-.stamp .icon-revistas {
+.stamp .icon-frame {
     color: #fff;
     position: relative;
 }
@@ -299,7 +299,7 @@ ul.sumary {
         width: 306px;
         height: 306px;
     }
-    .stamp.big .icon-revistas {
+    .stamp.big .icon-frame {
         font-size: 305px;
         color: #fff;
         position: relative;
@@ -318,7 +318,7 @@ ul.sumary {
         width: 140px;
         height: 140px;
     }
-    .stamp.small .icon-revistas {
+    .stamp.small .icon-frame {
         font-size: 140px;
         color: #fff;
         position: relative;

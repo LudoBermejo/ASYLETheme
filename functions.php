@@ -162,7 +162,7 @@ function get_authors_stamps($prole, $classul, $actual) {
         echo "<li>";
         echo '        <div class="stamp small"><a href="'.$author_profile_url.'"';
 
-        echo '                            <span class="icon-revistas">';
+        echo '                            <span class="icon-frame">';
         echo '                                <span class="content">';
         echo $avatar;
         echo '                                </span>';

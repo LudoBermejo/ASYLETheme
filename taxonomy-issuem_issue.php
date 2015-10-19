@@ -25,7 +25,7 @@
 	</div>
 	<div class="sidebar">
 		<div class="stamp small">
-                <span class="icon-revistas">
+                <span class="icon-frame">
                     <span class="content">#<?php echo get_active_issuem_issue(); ?>
                     </span>
                 </span>

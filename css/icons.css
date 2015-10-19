@@ -28,12 +28,16 @@
 
     
 /* SET DE ICONOS */
-.icon-revistas:before {
+.icon-frame:before {
 	content: "\e606";
 }
-.icon-indice:before {
+.icon-otros:before {
 	content: "\e600";
+
 }
+.icon-indice:before {
+	 content: "\e600";
+ }
 .icon-and:before {
 	content: "\e601";
 }

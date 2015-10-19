@@ -602,7 +602,7 @@ function getStampsPastIssues() {
             if($issue_array[0]->name !== get_issuem_issue_title() ) {
 
                 $result .= '<div class="stamp small"><a href="'.$issue_url.'">';
-                $result .= '<span class="icon-revistas">';
+                $result .= '<span class="icon-frame">';
                 $result .= '<span class="content">#';
                 $result .= $issue_meta["issue_order"];
                 $result .= '</span">';
@@ -669,7 +669,7 @@ function getStampsAllIssues($divideByCategory) {
 
 
                 $result .= '<div class="stamp big"><a href="'.$issue_url.'">';
-                $result .= '<span class="icon-revistas">';
+                $result .= '<span class="icon-frame">';
                 $result .= '<span class="content">#';
                 $result .= $issue_meta["issue_order"];
                 $result .= '</span">';
