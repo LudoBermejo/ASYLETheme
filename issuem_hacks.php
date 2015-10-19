@@ -257,13 +257,12 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
 
     $results .= '';
 
-
     if ( $articles ) :
 
         $old_post = $post;
 
-        $category = "";
         foreach( $articles as $article ) {
+
             $post = $article;
             setup_postdata( $article );
 
