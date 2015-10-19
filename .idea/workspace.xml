@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-relatos.php" afterPath="$PROJECT_DIR$/page-relatos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issuem_hacks.php" afterPath="$PROJECT_DIR$/issuem_hacks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.833333">
-              <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.36612022">
+              <caret line="149" column="31" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
               </folding>
@@ -66,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-relatos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72677594">
-              <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+            <state vertical-scroll-proportion="-17.875">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -95,8 +96,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/page-inicio.php" />
-        <option value="$PROJECT_DIR$/issuem_hacks.php" />
         <option value="$PROJECT_DIR$/page-relatos.php" />
+        <option value="$PROJECT_DIR$/issuem_hacks.php" />
       </list>
     </option>
   </component>
@@ -273,21 +274,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
+    <entry file="file://$PROJECT_DIR$/page-relatos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.833333">
-          <caret line="257" column="19" selection-start-line="257" selection-start-column="19" selection-end-line="257" selection-end-column="19" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-17.875">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-relatos.php">
+    <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72677594">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="0.36612022">
+          <caret line="149" column="31" selection-start-line="149" selection-start-column="31" selection-end-line="149" selection-end-column="31" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -147,6 +147,7 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
 
         $count = 0;
 
+        echo $article_category;
         if ( 'all' === $article_category ) {
 
             $all_terms = get_terms( 'issuem_issue_categories' );
