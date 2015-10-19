@@ -38,8 +38,7 @@
                 <?php
 
                 $special = array(
-                    'use_category_order'	=> 'true',
-                    'article_category'		=> 'Cuentos'
+                    'use_category_order'	=> 'true'
                 );
 
 
