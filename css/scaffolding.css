@@ -228,6 +228,11 @@ ul.pagination {
     clear: both;
     display: block;
 }
+    @media only screen and (max-width: 1200px) {
+        .inicio-index {
+            margin-top: 36px;
+        }
+    }
 
 /* CONTENT LIST INLINE */
 ul.sumary {
@@ -258,11 +263,7 @@ ul.sumary {
             content: ",";
             margin-right: 5px;
         }
-	@media only screen and (max-width: 1200px) {
-		ul.sumary {
-			margin-top: 36px;
-		}
-	}
+
 		
 
 /* STAMP */
