@@ -44,7 +44,7 @@
 
                 $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
                 $lineCategory = '<li><strong>%TITLE%, %BYLINE%</strong></li>';
-                echo get_issuem_articles_free_form($special, $line, $lineCategory);
+                echo get_issuem_articles_free_form("", $line, $lineCategory);
                 ?>
             </ul>
         </div>        
