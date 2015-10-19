@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issuem_hacks.php" afterPath="$PROJECT_DIR$/issuem_hacks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-relatos.php" afterPath="$PROJECT_DIR$/page-relatos.php" />
     </list>
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.283353">
-              <caret line="218" column="67" selection-start-line="218" selection-start-column="67" selection-end-line="218" selection-end-column="67" />
+            <state vertical-scroll-proportion="-30.291666">
+              <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
               </folding>
@@ -56,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page-relatos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.041666">
-              <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.14994097">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,8 +86,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/page-inicio.php" />
-        <option value="$PROJECT_DIR$/page-relatos.php" />
         <option value="$PROJECT_DIR$/issuem_hacks.php" />
+        <option value="$PROJECT_DIR$/page-relatos.php" />
       </list>
     </option>
   </component>
@@ -313,21 +314,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-relatos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.041666">
-          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.283353">
-          <caret line="218" column="67" selection-start-line="218" selection-start-column="67" selection-end-line="218" selection-end-column="67" />
+        <state vertical-scroll-proportion="-30.291666">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page-relatos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14994097">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

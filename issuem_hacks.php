@@ -210,13 +210,13 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
             'operator'	=> 'NOT IN',
         );
 
-/*        $args['tax_query'] = array(
+        $args['tax_query'] = array(
             'relation'      => 'AND',
             $issuem_issue,
             $category
         );
 
-        $articles = array_merge( $articles, get_posts( $args ) );*/
+        $articles = array_merge( $articles, get_posts( $args ) );
 
         //Now we need to get rid of duplicates (assuming an article is in more than one category
         if ( !empty( $articles ) ) {

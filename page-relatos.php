@@ -39,7 +39,6 @@
                 <?php
 
                 $special = array(
-                    'use_category_order'	=> 'true',
                     'article_category'		=> 'articulos'
                 );
 
@@ -55,7 +54,6 @@
                 <?php
 
                 $special = array(
-                    'use_category_order'	=> 'true',
                     'article_category'		=> 'entrevistas'
                 );
 
@@ -71,7 +69,6 @@
                 <?php
 
                 $special = array(
-                    'use_category_order'	=> 'true',
                     'article_category'		=> 'cuentos'
                 );
 
