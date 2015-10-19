@@ -223,6 +223,9 @@ ul.pagination {
         }
 
 
+.inicio-index {
+    margin-bottom: 36px;
+}
 
 /* CONTENT LIST INLINE */
 ul.sumary {
@@ -231,7 +234,7 @@ ul.sumary {
     font-weight: normal;
     font-size: 16px;
     line-height: 27px;
-    margin-bottom: 36px;
+
 }
     ul.sumary li {
         display: inline;
