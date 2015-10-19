@@ -617,7 +617,7 @@ function getStampsPastIssues() {
 }
 
 
-function getStampsAllIssues() {
+function getStampsAllIssues($divideByCategory) {
 
     $archives = do_issuem_archives_list("");
 
@@ -665,7 +665,7 @@ function getStampsAllIssues() {
 
 
         $issue_meta = get_option( 'issuem_issue_' . $issue_array[0]->term_id . '_meta' );
-        if ( 'Draft' !== $issue_meta['issue_status'] && isset($issue_meta["issue_order"])) {
+        if ( 'Draft' !== $issue_meta['issue_status'] && isset($issue_meta["issue_order"]) ) {
 
 
                 $result .= '<div class="stamp big"><a href="'.$issue_url.'">';
@@ -688,11 +688,43 @@ function getStampsAllIssues() {
                     $result .= '</blockquote>';
                 $result .= '</div>';
 
-                $result .= '<ul class="sumary">';
-                $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                if(!$divideByCategory) {
+                    $result .= '<ul class="sumary">';
+                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
 
-                $result .= get_issuem_articles_free_form("", $line, $issue_array[0]->slug);
-                $result .= '</ul>';
+                    $result .= get_issuem_articles_free_form("", $line, $issue_array[0]->slug);
+                    $result .= '</ul>';
+                }
+                else {
+                    $result .= '<div class="inicio-index">';
+                    $result .= '<strong>Artículos</strong>';
+                    $result .= '<ul class="sumary">';
+                    $special = array(
+                        'article_category'		=> 'articulos'
+                    );
+                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $result .= get_issuem_articles_free_form($special, $line);
+                    $result .= '</ul>';
+                    $result .= '<strong>Entrevistas</strong>';
+                    $result .= '<ul class="sumary">';
+                    $special = array(
+                        'article_category'      => 'entrevistas'
+                    );
+                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $result .= get_issuem_articles_free_form($special, $line);
+                    $result .= '</ul>';
+                    $result .= '<strong>Cuentos</strong>';
+                    $result .= '<ul class="sumary">';
+                    $special = array(
+                        'article_category'      => 'cuentos'
+                    );
+                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $result .= get_issuem_articles_free_form($special, $line);
+                    $result .= '</ul>';
+
+                    $result .= '</div>';
+                }
+
 
         }
     }
