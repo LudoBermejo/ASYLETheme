@@ -17,6 +17,8 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
+                </div>
+            <div class="inicio-index">
                 <h2>Las entrevistas</h2>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
@@ -31,6 +33,8 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
+                </div>
+            <div class="inicio-index">
                 <h2>Los cuentos</h2>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
