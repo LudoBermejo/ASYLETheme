@@ -19,6 +19,10 @@ header .nav a {
 	font-weight: 600;
 }
 
+header .nav a .wrapper-icon-selected {
+	color: #ee7457;
+}
+
 ul.names {
     font-size: 15px;
 }
