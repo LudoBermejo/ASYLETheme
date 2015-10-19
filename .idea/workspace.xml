@@ -69,7 +69,7 @@
       <file leaf-file-name="page-inicio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-inicio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.375">
+            <state vertical-scroll-proportion="-7.5">
               <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
               <folding />
             </state>
@@ -89,8 +89,8 @@
       <file leaf-file-name="scaffolding.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/scaffolding.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59511346">
-              <caret line="236" column="21" selection-start-line="236" selection-start-column="21" selection-end-line="236" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.38568935">
+              <caret line="228" column="19" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -373,6 +373,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page-inicio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/pages.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -381,18 +389,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-inicio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/scaffolding.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59511346">
-          <caret line="236" column="21" selection-start-line="236" selection-start-column="21" selection-end-line="236" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.38568935">
+          <caret line="228" column="19" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="19" />
           <folding />
         </state>
       </provider>

@@ -225,6 +225,8 @@ ul.pagination {
 
 .inicio-index {
     margin-bottom: 36px;
+    clear: both;
+    display: block;
 }
 
 /* CONTENT LIST INLINE */
