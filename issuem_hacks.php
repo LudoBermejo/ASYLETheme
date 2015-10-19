@@ -134,9 +134,11 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
         'terms' 	=> $issue
     );
 
-    $args['tax_query'] = array(
-        $issuem_issue
-    );
+    if($issue != "empty") {
+        $args['tax_query'] = array(
+            $issuem_issue
+        );
+    }
 
     if ( !empty( $issuem_settings['use_wp_taxonomies'] ) )
         $cat_type = 'category';
@@ -191,11 +193,17 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
                 'terms' 	=> $term,
             );
 
-            $args['tax_query'] = array(
-                'relation'	=> 'AND',
-                $issuem_issue,
-                $category
-            );
+            if($issue != "empty") {
+                $args['tax_query'] = array(
+                    'relation'	=> 'AND',
+                    $issuem_issue,
+                    $category
+                );
+            } else {
+                $args['tax_query'] = array(
+                    $category
+                );
+            }
 
             $articles = array_merge( $articles, get_posts( $args ) );
 
@@ -210,11 +218,17 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
             'operator'	=> 'NOT IN',
         );
 
-        $args['tax_query'] = array(
-            'relation'      => 'AND',
-            $issuem_issue,
-            $category
-        );
+        if($issue != "empty") {
+            $args['tax_query'] = array(
+                'relation'      => 'AND',
+                $issuem_issue,
+                $category
+            );
+        } else {
+            $args['tax_query'] = array(
+                $category
+            );
+        }
 
         $articles = array_merge( $articles, get_posts( $args ) );
 
@@ -245,12 +259,17 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
                 'terms' 	=> split( ',', $article_category ),
             );
 
-            $args['tax_query'] = array(
-                'relation'	=> 'AND',
-                $issuem_issue,
-                $category
-            );
-
+            if($issue != "empty") {
+                $args['tax_query'] = array(
+                    'relation'	=> 'AND',
+                    $issuem_issue,
+                    $category
+                );
+            } else {
+                $args['tax_query'] = array(
+                    $category
+                );
+            }
         }
 
         $articles = get_posts( $args );
