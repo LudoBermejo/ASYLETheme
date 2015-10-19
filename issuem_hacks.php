@@ -265,7 +265,7 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
         $category = "";
         foreach( $articles as $article ) {
 
-            var_dumnp($article);
+            var_dump($article);
             $post = $article;
             setup_postdata( $article );
 
