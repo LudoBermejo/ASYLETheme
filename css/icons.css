@@ -31,7 +31,7 @@
 .icon-frame:before {
 	content: "\e606";
 }
-.icon-otros:before {
+.icon-hemeroteca:before {
 	content: "\e600";
 
 }
@@ -43,6 +43,9 @@
 }
 .icon-equipo:before {
 	content: "\e601";
+}
+.icon-archivos:before {
+	content: "\e602";
 }
 .icon-articulos:before {
 	content: "\e602";

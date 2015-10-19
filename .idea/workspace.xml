@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author.php" afterPath="$PROJECT_DIR$/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/icons.css" afterPath="$PROJECT_DIR$/css/icons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issuem_hacks.php" afterPath="$PROJECT_DIR$/issuem_hacks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-entrevistas.php" afterPath="$PROJECT_DIR$/page-entrevistas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-equipo.php" afterPath="$PROJECT_DIR$/page-equipo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-inicio.php" afterPath="$PROJECT_DIR$/page-inicio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-relatos.php" afterPath="$PROJECT_DIR$/page-relatos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pages.css" afterPath="$PROJECT_DIR$/css/pages.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/scaffolding.css" afterPath="$PROJECT_DIR$/css/scaffolding.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single-article.php" afterPath="$PROJECT_DIR$/single-article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taxonomy-issuem_issue.php" afterPath="$PROJECT_DIR$/taxonomy-issuem_issue.php" />
     </list>
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,8 +86,8 @@
       <file leaf-file-name="icons.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/icons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86263734">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.83516484">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -524,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/icons.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86263734">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.83516484">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding />
         </state>
       </provider>
