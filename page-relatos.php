@@ -13,7 +13,7 @@
                     );
 
 
-                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
@@ -29,7 +29,7 @@
                     );
 
 
-                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
@@ -45,7 +45,7 @@
                     );
 
 
-                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+                    $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
