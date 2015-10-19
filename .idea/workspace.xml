@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="" />
+    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-relatos.php" afterPath="$PROJECT_DIR$/page-relatos.php" />
+    </list>
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -67,8 +69,8 @@
       <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page-relatos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8677686">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.58441556">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -608,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page-relatos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8677686">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.58441556">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding />
         </state>
       </provider>

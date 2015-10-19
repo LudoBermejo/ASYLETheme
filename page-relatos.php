@@ -31,7 +31,7 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
-                <strong>Cuentos</strong>
+                <h1>Cuentos</h1>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
