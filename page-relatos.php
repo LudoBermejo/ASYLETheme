@@ -34,14 +34,19 @@
                 </span>
             </div>
             <ul class="names">
-
-                <li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>
+                <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                 <?php
+
+                $special = array(
+                    'use_category_order'	=> 'true',
+                    'article_category'		=> 'Cuentos'
+                );
+
+
                 $line = '<li><a class="issuem_article_link" href="%URL%">%TITLE%, %BYLINE%</a></li>';
-                echo get_issuem_articles_free_form("", $line);
-
+                $lineCategory = '<li><strong>%TITLE%, %BYLINE%</strong></li>';
+                echo get_issuem_articles_free_form($special, $line);
                 ?>
-
             </ul>
         </div>        
     </div>
