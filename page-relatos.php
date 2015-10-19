@@ -33,6 +33,7 @@
                     </span>
                 </span>
             </div>
+            <strong>Cuentos</strong>
             <ul class="names">
                 <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                 <?php
