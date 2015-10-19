@@ -17,7 +17,7 @@
 
 
 <!--            <div class="stamp big">
-                        <span class="icon-frame">
+                        <span class="icon-revistas">
                             <span class="content">#3</span>
                         </span>
             </div>
@@ -45,49 +45,49 @@
             <div class="carrousel">
                 <div class="issues">
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>
                                 </span>
                     </div>
                     <div class="stamp small">
-                                <span class="icon-frame">
+                                <span class="icon-revistas">
                                     <span class="content">
 
                                     </span>

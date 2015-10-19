@@ -8,7 +8,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 
 	<div class="content">
 		<div class="stamp small">
-                            <span class="icon-frame">
+                            <span class="icon-revistas">
                                 <span class="content">
                                     <?php echo get_avatar( $curauth->user_email, apply_filters( 'issuem_magazine_author_bio_avatar_size', 115 ) );?>
                                 </span>

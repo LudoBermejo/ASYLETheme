@@ -13,7 +13,7 @@
 	</div>
 	<div class="sidebar">
 		<div class="stamp small">
-                <span class="icon-frame">
+                <span class="icon-revistas">
                     <span class="content">#<?php $data = get_issuem_issue_meta();
 						echo $data["issue_order"]; ?>
                     </span>

@@ -6,7 +6,7 @@
             <ul class="gallery">
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testV.png">
                                         </span>
@@ -16,7 +16,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testH.png">
                                         </span>
@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testBig.png">
                                         </span>
@@ -36,7 +36,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testV.png">
                                         </span>
@@ -46,7 +46,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testH.png">
                                         </span>
@@ -56,7 +56,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testBig.png">
                                         </span>
@@ -66,7 +66,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testV.png">
                                         </span>
@@ -76,7 +76,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testH.png">
                                         </span>
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                     <div class="stamp small">
-                                    <span class="icon-frame">
+                                    <span class="icon-revistas">
                                         <span class="content">
                                             <img src="img/test/testBig.png">
                                         </span>

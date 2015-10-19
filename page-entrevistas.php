@@ -16,7 +16,7 @@
         </div>
 		<div class="sidebar">
             <div class="stamp small">
-                        <span class="icon-frame">
+                        <span class="icon-revistas">
                             <span class="content">
                                 <img src="img/test/testV.png">
                             </span>
