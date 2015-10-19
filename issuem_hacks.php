@@ -168,7 +168,6 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
             foreach( split( ',', $article_category ) as $term_slug ) {
 
                 $term = get_term_by( 'slug', $term_slug, 'issuem_issue_categories' );
-                var_dump($term);
 
                 $issue_cat_meta = get_option( 'issuem_issue_categories_' . $term->term_id . '_meta' );
 
@@ -201,6 +200,8 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
             $articles = array_merge( $articles, get_posts( $args ) );
 
         }
+
+        var_dump($articles);
 
         //And we want all articles not in a category
         $category = array(
