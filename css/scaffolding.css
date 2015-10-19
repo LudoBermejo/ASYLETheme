@@ -234,7 +234,7 @@ ul.sumary {
     font-weight: normal;
     font-size: 16px;
     line-height: 27px;
-
+    margin-bottom: 10px;
 }
     ul.sumary li {
         display: inline;

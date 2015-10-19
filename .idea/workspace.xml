@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-inicio.php" afterPath="$PROJECT_DIR$/page-inicio.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/scaffolding.css" afterPath="$PROJECT_DIR$/css/scaffolding.css" />
     </list>
     <ignored path="ASYLETheme.iws" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="scaffolding.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/scaffolding.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2809773">
-              <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.59511346">
+              <caret line="236" column="21" selection-start-line="236" selection-start-column="21" selection-end-line="236" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -392,8 +391,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/scaffolding.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2809773">
-          <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.59511346">
+          <caret line="236" column="21" selection-start-line="236" selection-start-column="21" selection-end-line="236" selection-end-column="21" />
           <folding />
         </state>
       </provider>
