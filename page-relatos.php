@@ -3,7 +3,7 @@
         <div class="content">
 
             <div class="inicio-index">
-                <h2>Artículos</h2>
+                <h2>Los artículos</h2>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
@@ -17,7 +17,7 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
-                <h2>Entrevistas</h2>
+                <h2>Las entrevistas</h2>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
@@ -31,7 +31,7 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
-                <h2>Cuentos</h2>
+                <h2>Los cuentos</h2>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
