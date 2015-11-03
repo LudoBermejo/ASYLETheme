@@ -3,6 +3,12 @@
     float: left;
     margin: 0 36px 36px 0;    
 }
+
+.stamp .content img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
 .home .well {
     float: left;
     width: 552px;
@@ -73,6 +79,7 @@
 			padding-left: 0;
 		}
 	}
+
 
 
 /* ESSAYS PAGE (home + internal) */
