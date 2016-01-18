@@ -67,5 +67,6 @@ p {
     font-size: 15px;
     line-height: 27px;
     margin-bottom: 27px;
+    max-width: 500px;
 }
 
