@@ -10,9 +10,10 @@
 
 		<?php endwhile; // end of the loop. ?>
 
+		<?php comments_template(); ?>
 	</div>
 
-	<?php comments_template(); ?>
+
 	<div class="sidebar">
 		<div class="stamp small">
                 <span class="icon-frame">
