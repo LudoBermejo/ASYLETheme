@@ -5,6 +5,7 @@
     <title>A sangre y letras, revista literaria</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="http://www.asangreyletras.es/wp-content/uploads/2016/01/asyle_logo3.jpg" />
     <?php wp_head(); ?>
 </head>
 <body <?php body_class()?>>
