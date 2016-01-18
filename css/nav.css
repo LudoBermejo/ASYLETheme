@@ -1,10 +1,12 @@
 header .nav {
-	width: 1000px;
+	width: calc(100% - 250px);
 	float: left;
+	position: relative;
+	z-index: 10000;
 
 }
 header .nav li {
-	width: 16.66%;
+	width: 25%;
 	height: 125px; 
 	float: left;
 }
@@ -17,6 +19,57 @@ header .nav a {
 	font-size: 20px;
 	line-height: 36px;
 	font-weight: 600;
+}
+header .menu-trigger {
+	display: none;
+}
+@media only screen and (max-width: 768px) {
+	header .menu-trigger {
+		display: block;
+	}
+	header .nav {
+		position: absolute;
+		top: 135px;
+		right: 36px;
+		background: #e4d7c7;
+		width: 150px;
+		padding: 10px;
+		box-shadow: 0 0 10px rgba(0,0,0,.5);
+		display: none;
+	}
+	header .active {
+		display: block;
+	}
+	header .nav li {
+		display: block;
+		float: none;
+		width: 100%;
+		text-align: left;
+		height: auto;
+	}
+	header .nav li .wrapper-icon {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	header .nav li a {
+		display: block;
+		text-align: left;
+		margin: 0 0 20px 0;
+	}
+	header .nav li:last-child a {
+		margin: 0;
+	}
+	.menu-trigger {
+		height: 36px;
+		width: 36px;
+		display: block;
+		float: right;
+		margin-right: 36px;
+		margin-top: 45px;
+		padding: 0;
+		background: transparent;
+		border: 0;
+	}
 }
 
 header .nav a .wrapper-icon-selected {
@@ -46,56 +99,3 @@ ul.names {
         color: #ee7457;
     }
 	
-	@media only screen and (max-width: 1200px) {
-		header .nav {
-			width: 80%;
-			float: left;
-		}
-		.sidebar ul.names {
-			padding-left: 0;
-		}
-		
-		.sidebar ul.names {
-			width: 90%;
-			margin: 0 auto;
-			text-align: center;
-		} 
-		.sidebar ul.names li {
-			display: inline-block;
-		}
-		.sidebar ul.names li.title {
-			margin-bottom: 0;
-		}
-		.sidebar ul.names li:after {
-			content: " | ";
-			margin: 0 10px;
-		}		
-		.sidebar ul.names li:last-child:after{
-			content: " | ";
-		}	
-	}
-	@media only screen and (max-width: 768px) {
-		header .nav {
-			width: 100%;
-			clear: both;
-		}
-		header .nav li {
-			width: 16.66%;
-			height: 36px;
-			line-height: 36px;
-			float: left;
-		}
-		header .nav a {
-			margin-top: 9px;
-		}
-		ul.nav .wrapper-icon {
-			display: none;
-		}
-			
-
-	}
-	@media only screen and (max-width: 540px) {
-		header .nav li {
-			width: 33.33%;
-		}
-	}
