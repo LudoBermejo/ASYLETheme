@@ -11,6 +11,8 @@
 		<?php endwhile; // end of the loop. ?>
 
 	</div>
+
+	<?php comments_template(); ?>
 	<div class="sidebar">
 		<div class="stamp small">
                 <span class="icon-frame">
