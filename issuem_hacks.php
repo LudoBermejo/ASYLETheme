@@ -716,7 +716,7 @@ function getStampsAllIssues($divideByCategory) {
                 }
                 else {
                     $result .= '<div class="inicio-index">';
-                    $result .= '<strong>Artículos</strong>';
+                    $result .= '<h3>Artículos</h3>';
                     $result .= '<ul class="sumary">';
                     $special = array(
                         'article_category'		=> 'articulos'
@@ -724,7 +724,7 @@ function getStampsAllIssues($divideByCategory) {
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
                     $result .= get_issuem_articles_free_form($special, $line);
                     $result .= '</ul>';
-                    $result .= '<strong>Entrevistas</strong>';
+                    $result .= '<h3>Entrevistas</h3>';
                     $result .= '<ul class="sumary">';
                     $special = array(
                         'article_category'      => 'entrevistas'
@@ -732,7 +732,7 @@ function getStampsAllIssues($divideByCategory) {
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
                     $result .= get_issuem_articles_free_form($special, $line);
                     $result .= '</ul>';
-                    $result .= '<strong>Cuentos</strong>';
+                    $result .= '<h3>Cuentos</h3>';
                     $result .= '<ul class="sumary">';
                     $special = array(
                         'article_category'      => 'cuentos'

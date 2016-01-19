@@ -26,7 +26,7 @@
             <?php echo getAllIssues(); ?>
 
             <div class="inicio-index">
-                <strong>Artículos</strong>
+                <h3>Artículos</h3>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
@@ -40,7 +40,7 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
-                <strong>Entrevistas</strong>
+                <h3>Entrevistas</h3>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
@@ -54,7 +54,7 @@
                     echo get_issuem_articles_free_form($special, $line);
                     ?>
                 </ul>
-                <strong>Cuentos</strong>
+                <h3>Cuentos</h3>
                 <ul class="sumary">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
                     <?php
