@@ -76,7 +76,7 @@ p {
 }
     @media only screen and (max-width: 599px) {
         p {
-            font-size: 17px;
+            font-size: 20px;
             line-height: 36px;
         }
     }
