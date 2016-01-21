@@ -9,10 +9,6 @@
     <?php wp_head(); ?>
     <script src="/wp-content/themes/asyle/lib/jquery/jquery-1.11.2.min.js"></script>
     <script src="/wp-content/themes/asyle/js/interaction.js"></script>
-
-</head>
-<body <?php body_class()?>>
-
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -30,6 +26,10 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+</head>
+<body <?php body_class()?>>
+
+
 
     <div class="wrapper">
         <header class="main">
