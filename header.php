@@ -25,6 +25,7 @@
                         width: 138px;
                         padding-top: 25px;
                     ">
+                        </a>
                 </div>
                 <button class="menu-trigger"><img src="/wp-content/themes/asyle/img/burger-icon.png"></button>
 
