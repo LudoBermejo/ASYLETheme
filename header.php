@@ -19,7 +19,12 @@
         <header class="main">
             <div class="inner">
                 <div class="logo">
-                    <a href="<?php echo get_site_url();?> ">as<span class="icon-and"></span>le</a>
+                    <a href="<?php echo get_site_url();?> ">
+
+                    <img src="http://www.asangreyletras.es/wp-content/themes/asyle/img/logo.png" style="
+                        width: 138px;
+                        padding-top: 25px;
+                    ">
                 </div>
                 <button class="menu-trigger"><img src="/wp-content/themes/asyle/img/burger-icon.png"></button>
 
