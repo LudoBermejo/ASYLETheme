@@ -624,9 +624,9 @@ function getStampsPastIssues() {
                 $result .= '<span class="icon-frame">';
                 $result .= '<span class="content">#';
                 $result .= $issue_meta["issue_order"];
-                $result .= '</span">';
-                $result .= '</span">'.'</a>';
-                $result .= '</div">';
+                $result .= '</span>';
+                $result .= '</span></a>';
+                $result .= '</div>';
             }
         }
     }

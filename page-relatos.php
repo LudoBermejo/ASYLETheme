@@ -14,7 +14,7 @@
 
 
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>, %BYLINE%</a></li>';
-                    echo get_issuem_articles_free_form($special, $line);
+                    echo get_issuem_articles_free_form($special, $line, "empty");
                     ?>
                 </ul>
                 </div>
@@ -30,7 +30,7 @@
 
 
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>, %BYLINE%</a></li>';
-                    echo get_issuem_articles_free_form($special, $line);
+                    echo get_issuem_articles_free_form($special, $line, "empty");
                     ?>
                 </ul>
                 </div>
@@ -46,7 +46,7 @@
 
 
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>, %BYLINE%</a></li>';
-                    echo get_issuem_articles_free_form($special, $line);
+                    echo get_issuem_articles_free_form($special, $line, "empty");
                     ?>
                 </ul>
             </div>

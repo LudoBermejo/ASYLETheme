@@ -4,7 +4,13 @@
 	<div class="content">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php
+				global $post;
+				$issues = get_the_terms( $post->ID, 'issuem_issue' );
+				foreach( $issues as $issue ) {
+					$lastSlug = $issue->slug;
+				}
+			?>
 
 			<?php get_template_part( 'content', 'article');?>
 
@@ -18,7 +24,7 @@
 		<div class="stamp small">
                 <span class="icon-frame">
                     <span class="content">#<?php $data = get_issuem_issue_meta();
-						echo $data["issue_order"]; ?>
+						echo $lastSlug; ?>
                     </span>
                 </span>
 		</div>
