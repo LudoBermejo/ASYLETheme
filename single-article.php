@@ -7,9 +7,10 @@
 			<?php
 				global $post;
 				$issues = get_the_terms( $post->ID, 'issuem_issue' );
-				foreach( $issues as $issue ) {
-					$lastSlug = $issue->slug;
-				}
+				if(!empty($issues) && is_array($issues) )
+					foreach( $issues as $issue ) {
+						$lastSlug = $issue->slug;
+					}
 			?>
 
 			<?php get_template_part( 'content', 'article');?>
