@@ -25,7 +25,7 @@
                     <?php
 
                     $special = array(
-                        'article_category'		=> 'reseñas'
+                        'article_category'		=> 'resenas'
                     );
 
 
