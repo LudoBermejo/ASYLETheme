@@ -18,7 +18,9 @@
                     Cuando el narrador es fiel, eterna e inquebrantablemente fiel a la historia, al final es el silencio quien habla. Cuando la historia ha sido traicionada, el silencio no es más que vacío. Pero nosotros, los fieles, cuando hemos dicho nuestra última palabra oímos la voz del silencio.
                 </blockquote>
             </div>
-            <div class="inicio-index">Próximo número a finales de Marzo</div>
+            <div class="inicio-index">
+                <h3>Próximo número a finales de Marzo</h3>
+            </div>
 
 
             <?php
