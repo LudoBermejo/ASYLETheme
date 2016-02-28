@@ -3,6 +3,22 @@
         <div class="content">
 
 
+            <div class="stamp big">
+                <span class="icon-frame">
+                    <span class="content">#2
+                    </span>
+                </span>
+            </div>
+            <div class="well">
+                <h2>
+                    Karen Blixen
+                    <small>Próximamente</small>
+                </h2>
+                <blockquote>
+                    Cuando el narrador es fiel, eterna e inquebrantablemente fiel a la historia, al final es el silencio quien habla. Cuando la historia ha sido traicionada, el silencio no es más que vacío. Pero nosotros, los fieles, cuando hemos dicho nuestra última palabra oímos la voz del silencio.
+                </blockquote>
+            </div>
+
             <?php
             if ( have_posts() ):
 
