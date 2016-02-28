@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-inicio.php" afterPath="$PROJECT_DIR$/page-inicio.php" />
-    </list>
+    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="" />
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
