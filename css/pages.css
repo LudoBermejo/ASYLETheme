@@ -112,7 +112,9 @@
 
 
 
-
+.newsletter, .newsletter td {
+	line-height: 40px;
+}
 
 .newsletter-submit {
 	width:100px;
