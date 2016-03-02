@@ -111,8 +111,8 @@
 	}
 
 
-.newsletter-subscription table {
-	font-size:14px;
+.newsletter-subscription th {
+	line-height: 50px;
 }
 .newsletter-subscription input {
 	padding-top:15px;
