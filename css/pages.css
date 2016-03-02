@@ -111,7 +111,10 @@
 	}
 
 
-.newsletter-subscription td {
+.newsletter-subscription table {
+	font-size:14px;
+}
+.newsletter-subscription input {
 	padding-top:15px;
 }
 
