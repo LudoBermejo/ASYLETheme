@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pages.css" afterPath="$PROJECT_DIR$/css/pages.css" />
-    </list>
+    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="" />
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="pages.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/pages.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84375">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.78515625">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="116" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -662,8 +660,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/pages.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84375">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.78515625">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="116" selection-end-column="1" />
           <folding />
         </state>
       </provider>
