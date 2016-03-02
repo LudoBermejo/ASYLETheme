@@ -114,6 +114,7 @@
             <p><span class="icon-inicio wrapper-icon"></span></p>
             <p><strong>A sangre y letras</strong> es una revista literaria creada por alumnos del <strong><a href="http://escrituracreativa.com/">taller de escritura creativa de Clara Obligado</a></strong></p>
             <p>Si quieres saber más de nosotros <strong><a href="/la-revista/">pincha aquí</a></strong></p>
+            <p>O, si lo prefieres, puedes apuntarte a nuestro <strong><a href="/newsletter/">boletín de noticias</a></strong></p>
         </div>
     </div>
 <!--<script>
