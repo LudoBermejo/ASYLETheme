@@ -112,8 +112,8 @@
 
 
 
-.newsletter, .newsletter td {
-	line-height: 40px;
+.newsletter td {
+	line-height: 40px !important;
 }
 
 .newsletter-submit {
