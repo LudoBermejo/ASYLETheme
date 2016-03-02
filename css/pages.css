@@ -111,4 +111,11 @@
 	}
 
 
+.newsletter-subscription th {
+	padding-top:15px;
+}
 
+.newsletter-submit {
+	width:100px;
+	height:30px;
+}
