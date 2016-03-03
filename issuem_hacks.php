@@ -734,6 +734,13 @@ function getStampsAllIssues($divideByCategory) {
                 }
                 else {
                     $result .= '<div class="inicio-index">';
+
+                    $result .= getArticlesFromCategory("Artículos", "articulos");
+                    $result .= getArticlesFromCategory("Reseñas", "resenas");
+                    $result .= getArticlesFromCategory("Entrevistas", "entrevistas");
+                    $result .= getArticlesFromCategory("Micros", "micros");
+                    $result .= getArticlesFromCategory("Cuentos", "cuentos");
+
                     $result .= '<h3>Artículos</h3>';
                     $result .= '<ul class="sumary">';
                     $special = array(
