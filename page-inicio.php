@@ -56,10 +56,6 @@
                         ?>
 
                         <?php
-                            echo getArticlesFromCategory("Entrevistas", "entrevistas");
-                        ?>
-
-                        <?php
                             echo getArticlesFromCategory("Reseñas", "resenas");
                         ?>
 
