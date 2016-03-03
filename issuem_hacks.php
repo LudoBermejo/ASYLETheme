@@ -75,6 +75,23 @@ function get_issuem_issue_count( $id = false ) {
 
 }
 
+function getArticlesFromCategory($title, $category) {
+    $section = "<h3>".$title."</h3>";
+    $section .= '<ul class="sumary">';
+
+    $special = array(
+        'article_category'		=> $category
+    );
+    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+    $value = get_issuem_articles_free_form($special, $line);
+    $section .= $value;
+    $section .=  "</ul>";
+    if($value) {
+        return $section;
+    } else {
+        return "";
+    }
+}
 
 function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = "" ) {
 
