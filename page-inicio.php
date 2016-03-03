@@ -60,6 +60,14 @@
                         ?>
 
                         <?php
+                            echo getArticlesFromCategory("Reseñas", "resenas");
+                        ?>
+
+                        <?php
+                            echo getArticlesFromCategory("Entrevistas", "entrevistas");
+                        ?>
+
+                        <?php
                             echo getArticlesFromCategory("Cuentos", "cuentos");
                         ?>
 
