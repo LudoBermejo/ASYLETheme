@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-inicio.php" afterPath="$PROJECT_DIR$/page-inicio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/issuem_hacks.php" afterPath="$PROJECT_DIR$/issuem_hacks.php" />
     </list>
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,21 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-inicio.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-inicio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-inicio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4368932">
+            <state vertical-scroll-proportion="-9.375">
               <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="issuem_hacks.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.125">
-              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.6815534">
+              <caret line="89" column="52" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -104,8 +104,8 @@
         <option value="$PROJECT_DIR$/page-relatos.php" />
         <option value="$PROJECT_DIR$/css/pages.css" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/issuem_hacks.php" />
         <option value="$PROJECT_DIR$/page-inicio.php" />
+        <option value="$PROJECT_DIR$/issuem_hacks.php" />
       </list>
     </option>
   </component>
@@ -698,18 +698,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
+    <entry file="file://$PROJECT_DIR$/page-inicio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.125">
-          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-inicio.php">
+    <entry file="file://$PROJECT_DIR$/issuem_hacks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368932">
-          <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.6815534">
+          <caret line="89" column="52" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
           <folding />
         </state>
       </provider>

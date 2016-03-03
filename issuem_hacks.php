@@ -83,10 +83,11 @@ function getArticlesFromCategory($title, $category) {
         'article_category'		=> $category
     );
     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
+
     $value = get_issuem_articles_free_form($special, $line);
     $section .= $value;
     $section .=  "</ul>";
-    if($value) {
+    if(strpos($value, "no-articles-found") === false) {
         return $section;
     } else {
         return "";
