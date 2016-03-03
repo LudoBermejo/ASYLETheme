@@ -740,9 +740,6 @@ function getStampsAllIssues($divideByCategory) {
                     $result .= getArticlesFromCategory("Entrevistas", "entrevistas");
                     $result .= getArticlesFromCategory("Micros", "micros");
                     $result .= getArticlesFromCategory("Cuentos", "cuentos");
-
-                  
-
                     $result .= '</div>';
                 }
 
