@@ -56,37 +56,13 @@
                         ?>
 
                         <?php
-                        echo getArticlesFromCategory("Entrevistas", "entrevistas");
+                            echo getArticlesFromCategory("Entrevistas", "entrevistas");
                         ?>
 
-                        <h3>Entrevistas</h3>
-                        <ul class="sumary">
-                            <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
-                            <?php
+                        <?php
+                            echo getArticlesFromCategory("Cuentos", "cuentos");
+                        ?>
 
-                            $special = array(
-                                'article_category'		=> 'entrevistas'
-                            );
-
-
-                            $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
-                            echo get_issuem_articles_free_form($special, $line);
-                            ?>
-                        </ul>
-                        <h3>Cuentos</h3>
-                        <ul class="sumary">
-                            <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
-                            <?php
-
-                            $special = array(
-                                'article_category'		=> 'cuentos'
-                            );
-
-
-                            $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
-                            echo get_issuem_articles_free_form($special, $line);
-                            ?>
-                        </ul>
                     </div>
 
                     <div class="carrousel">
@@ -94,12 +70,8 @@
                             <?php
                                  echo getStampsPastIssues();
                             ?>
-
-
                         </div>
                     </div>
-
-
                 <?php endwhile;
             endif
             ?>
