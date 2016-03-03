@@ -64,6 +64,10 @@
                         ?>
 
                         <?php
+                            echo getArticlesFromCategory("Micros", "micros");
+                        ?>
+
+                        <?php
                             echo getArticlesFromCategory("Cuentos", "cuentos");
                         ?>
 
