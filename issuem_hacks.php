@@ -96,11 +96,13 @@ function getArticlesFromCategory($title, $category) {
 
 function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = "" ) {
 
+    var_dump($issue);echo "<br>";
+
     if(!($issue)) {
         $issue = get_active_issuem_issue();
     }
 
-    var_dump($issue);
+
     global $post;
 
     $issuem_settings = get_issuem_settings();
