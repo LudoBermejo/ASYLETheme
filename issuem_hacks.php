@@ -733,7 +733,7 @@ function getStampsAllIssues($divideByCategory) {
                     $result .= '<ul class="sumary">';
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
 
-                    $result .= get_issuem_articles_free_form("", $line, $issue_array[0]->slug);
+                    $result .= get_issuem_articles_free_form("", $line, NULL, $issue_array[0]->slug);
 
                     $result .= '</ul>';
                 }
