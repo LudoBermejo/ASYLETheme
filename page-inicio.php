@@ -3,13 +3,13 @@
         <div class="content">
 
 
-            <div class="stamp big">
+           <!--<div class="stamp big">
                 <span class="icon-frame">
                     <span class="content">#2
                     </span>
                 </span>
             </div>
-            <div class="well">
+            <!<div class="well">
                 <h2>
                     Karen Blixen
                     <small>Próximamente</small>
@@ -20,7 +20,7 @@
             </div>
             <div class="inicio-index">
                 <h3>Próximo número a finales de Marzo</h3>
-            </div>
+            </div>-->
 
 
             <?php
