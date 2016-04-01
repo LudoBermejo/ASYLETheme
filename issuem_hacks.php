@@ -75,7 +75,7 @@ function get_issuem_issue_count( $id = false ) {
 
 }
 
-function getArticlesFromCategory($title, $category) {
+function getArticlesFromCategory($title, $category, $issue = "") {
     $section = "<h3>".$title."</h3>";
     $section .= '<ul class="sumary">';
 
@@ -84,7 +84,7 @@ function getArticlesFromCategory($title, $category) {
     );
     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
 
-    $value = get_issuem_articles_free_form($special, $line);
+    $value = get_issuem_articles_free_form($special, $line, $issue);
     $section .= $value;
     $section .=  "</ul>";
     if(strpos($value, "no-articles-found") === false) {
@@ -733,18 +733,18 @@ function getStampsAllIssues($divideByCategory) {
                     $result .= '<ul class="sumary">';
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
 
-                    $result .= get_issuem_articles_free_form("", $line, NULL, $issue_array[0]->slug);
+                    $result .= get_issuem_articles_free_form("", $line,  $issue_array[0]->slug);
 
                     $result .= '</ul>';
                 }
                 else {
                     $result .= '<div class="inicio-index">';
 
-                    $result .= getArticlesFromCategory("Artículos", "articulos");
-                    $result .= getArticlesFromCategory("Reseñas", "resenas");
-                    $result .= getArticlesFromCategory("Entrevistas", "entrevistas");
-                    $result .= getArticlesFromCategory("Micros", "micros");
-                    $result .= getArticlesFromCategory("Cuentos", "cuentos");
+                    $result .= getArticlesFromCategory("Artículos", "articulos",  $issue_array[0]->slug);
+                    $result .= getArticlesFromCategory("Reseñas", "resenas",  $issue_array[0]->slug);
+                    $result .= getArticlesFromCategory("Entrevistas", "entrevistas",  $issue_array[0]->slug);
+                    $result .= getArticlesFromCategory("Micros", "micros",  $issue_array[0]->slug);
+                    $result .= getArticlesFromCategory("Cuentos", "cuentos",  $issue_array[0]->slug);
                     $result .= '</div>';
                 }
 
