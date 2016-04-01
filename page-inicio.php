@@ -31,7 +31,6 @@
                         <a href="<?php echo get_issuem_issue_link() ?>">
                                 <span class="icon-frame">
                                     <span class="content">#<?php $data = get_issuem_issue_meta();
-
                                         echo $data["issue_order"]; ?>
                                     </span>
                                 </span>

@@ -99,6 +99,8 @@ function get_issuem_articles_free_form( $atts, $article_format = NULL, $issue = 
     if(!($issue)) {
         $issue = get_active_issuem_issue();
     }
+
+    var_dump($issue);
     global $post;
 
     $issuem_settings = get_issuem_settings();
@@ -730,6 +732,7 @@ function getStampsAllIssues($divideByCategory) {
                     $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>%BYLINE%</a></li>';
 
                     $result .= get_issuem_articles_free_form("", $line, $issue_array[0]->slug);
+
                     $result .= '</ul>';
                 }
                 else {
