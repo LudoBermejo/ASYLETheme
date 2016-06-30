@@ -51,6 +51,10 @@
                     <div class="inicio-index">
 
                         <?php
+                            echo getArticlesFromCategory("Estrella invitada", "estrellainvitada");
+                        ?>
+
+                        <?php
                             echo getArticlesFromCategory("Artículos", "articulos");
                         ?>
 
