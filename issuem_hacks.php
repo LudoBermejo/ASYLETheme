@@ -719,7 +719,7 @@ function getStampsAllIssues($divideByCategory) {
                     $result .= '<h2>';
                     $result .= $issue_array[0]->name;
                     $result .= '<small>';
-                    $result .= 'Agosto 2015';
+                    //$result .= 'Agosto 2015';
                     $result .= '</small>';
                     $result .= '</h2>';
                     $result .= '<blockquote>';
