@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-inicio.php" afterPath="$PROJECT_DIR$/page-inicio.php" />
-    </list>
+    <list default="true" id="21a651d6-0188-4311-b908-01768a3c0008" name="Default" comment="" />
     <ignored path="ASYLETheme.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -74,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-inicio.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-inicio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page-inicio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="91">
               <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
               <folding />
             </state>
@@ -94,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page-relatos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page-relatos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -124,8 +122,8 @@
         <option value="$PROJECT_DIR$/css/pages.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/issuem_hacks.php" />
-        <option value="$PROJECT_DIR$/page-relatos.php" />
         <option value="$PROJECT_DIR$/page-inicio.php" />
+        <option value="$PROJECT_DIR$/page-relatos.php" />
       </list>
     </option>
   </component>
@@ -256,12 +254,12 @@
       <updated>1444054221326</updated>
       <workItem from="1459526040185" duration="1414000" />
       <workItem from="1459883701332" duration="68000" />
-      <workItem from="1467306433345" duration="668000" />
+      <workItem from="1467306433345" duration="823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2150000" />
+    <option name="totallyTimeSpent" value="2305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -644,18 +642,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-relatos.php">
+    <entry file="file://$PROJECT_DIR$/page-inicio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="91">
+          <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page-inicio.php">
+    <entry file="file://$PROJECT_DIR$/page-relatos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="53" column="95" selection-start-line="53" selection-start-column="95" selection-end-line="53" selection-end-column="95" />
+        <state relative-caret-position="187">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding />
         </state>
       </provider>
