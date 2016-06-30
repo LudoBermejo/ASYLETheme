@@ -11,7 +11,7 @@
 
 						echo get_issuem_issue_title($issue->term_id); ?>
 
-						<small><?php the_date('F Y'); ?></small>
+						<small><!<?php //the_date('F Y'); ?></small>
 					</h2>
 					<blockquote>
 						<?php echo get_issuem_issue_description($issue->term_id); ?>
