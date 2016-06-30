@@ -3,6 +3,23 @@
         <div class="content">
 
             <div class="inicio-index">
+                <h2>Estrella invitada</h2>
+                <ul class="names">
+                    <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
+                    <?php
+
+                    $special = array(
+                        'article_category'		=> 'estrellainvitada'
+                    );
+
+
+                    $line = '<li><a class="issuem_article_link" href="%URL%"><strong>%TITLE%</strong>, %BYLINE%</a></li>';
+                    echo get_issuem_articles_free_form($special, $line, "empty");
+                    ?>
+                </ul>
+            </div>
+
+            <div class="inicio-index">
                 <h2>Los artículos</h2>
                 <ul class="names">
                     <!--<li class="title"><a href="<?php echo get_permalink(12) ?>">Prólogo</a></li>-->
@@ -17,7 +34,8 @@
                     echo get_issuem_articles_free_form($special, $line, "empty");
                     ?>
                 </ul>
-                </div>
+            </div>
+
             <div class="inicio-index">
                 <h2>Las reseñas</h2>
                 <ul class="names">
