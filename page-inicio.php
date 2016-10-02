@@ -40,7 +40,7 @@
                         <h2>
                             <?php echo get_issuem_issue_title(); ?>
 
-                            <small>Junio 2016<!<?php //the_date('F Y'); ?></small>
+                            <small>Octubre 2016<!<?php //the_date('F Y'); ?></small>
                         </h2>
                         <blockquote>
                             <?php echo get_issuem_issue_description(); ?>
